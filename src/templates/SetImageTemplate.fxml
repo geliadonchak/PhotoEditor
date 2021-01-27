@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<fx:root fx:id="rootPane" prefHeight="50.0" prefWidth="125.0" type="javafx.scene.layout.AnchorPane"
+         xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <HBox prefWidth="125" prefHeight="50" style="-fx-background-color: #dddddd;">
+        <VBox alignment="CENTER">
+            <Label fx:id="titleBar" text="Label" prefWidth="100" alignment="CENTER">
+                <font>
+                    <Font size="14" name="System Bold"/>
+                </font>
+            </Label>
+            <Button fx:id="changeImagePath" maxWidth="Infinity" text="Открыть фото"/>
+        </VBox>
+        <AnchorPane fx:id="rightLinkHandle" prefWidth="30.0"
+                    style="-fx-background-color: #FF9FF9; -fx-background-radius: 5.0"/>
+    </HBox>
+</fx:root>
