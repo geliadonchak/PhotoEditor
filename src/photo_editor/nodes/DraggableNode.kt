@@ -16,7 +16,6 @@ import javafx.scene.layout.AnchorPane
 var stateAddLink = DataFormat("linkAdd")
 var stateAddNode = DataFormat("nodeAdd")
 
-// TODO TOWATCH
 open class DraggableNode : AnchorPane() {
 
     var isChangedProperty: BooleanProperty = SimpleBooleanProperty(false)
@@ -159,7 +158,6 @@ open class DraggableNode : AnchorPane() {
             parent.onDragOver = null
             parent.onDragDropped = null
 
-            // Remove and recount curves
             StaticResourceManager.nodeDragged = this.prevActionNode
             this.prevActionNode?.nextActionNode = null
             this.prevActionNode = null
