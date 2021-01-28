@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<fx:root fx:id="rootPane" prefHeight="90.0" prefWidth="200.0" type="javafx.scene.layout.AnchorPane"
+         xmlns="http://javafx.com/javDafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <HBox prefWidth="200.0" prefHeight="90.0" style="-fx-background-color: #dddddd;">
+        <AnchorPane fx:id="leftLinkHandle" prefWidth="30.0"
+                    style="-fx-background-color: #BFBBFF; -fx-background-radius: 5.0"/>
+        <VBox alignment="CENTER">
+            <Label fx:id="titleBar" text="Label" prefWidth="120.0" alignment="CENTER">
+                <font>
+                    <Font size="14" name="System Bold"/>
+                </font>
+            </Label>
+            <TextField fx:id="saturationFirstParam" text="0"/>
+            <TextField fx:id="saturationSecondParam" text="0"/>
+            <TextField fx:id="saturationThirdParam" text="0"/>
+            <Button fx:id="deleteTemplate" maxWidth="Infinity" text="Удалить" />
+        </VBox>
+        <AnchorPane fx:id="rightLinkHandle" prefWidth="30.0"
+                    style="-fx-background-color: #FF9FF9; -fx-background-radius: 5.0"/>
+    </HBox>
+</fx:root>
