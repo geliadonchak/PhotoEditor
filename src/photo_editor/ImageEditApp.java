@@ -68,6 +68,8 @@ public class ImageEditApp extends Application {
         MenuItem setSharpness = new MenuItem("Резкость");
         MenuItem changeBrightness = new MenuItem("Яркость");
         MenuItem setGray = new MenuItem("Оттенки серого");
+        MenuItem setBlackWhite = new MenuItem("Нуар");
+        MenuItem changeContrast = new MenuItem("Контрастность");
 
         Menu fileMenu = new Menu("Файл");
         MenuItem newProject = new MenuItem("Новый проект");
@@ -86,6 +88,8 @@ public class ImageEditApp extends Application {
         setNegative.addEventHandler(ActionEvent.ACTION, actionEvent -> createNode(NodeTypes.SetNegative));
         setSepia.addEventHandler(ActionEvent.ACTION, actionEvent -> createNode(NodeTypes.SetSepia));
         setGray.addEventHandler(ActionEvent.ACTION, actionEvent -> createNode(NodeTypes.SetGray));
+        setBlackWhite.addEventHandler(ActionEvent.ACTION, actionEvent -> createNode(NodeTypes.SetBlackWhite));
+        changeContrast.addEventHandler(ActionEvent.ACTION, actionEvent -> createNode(NodeTypes.ChangeContrast));
         saveThis.addEventHandler(ActionEvent.ACTION, actionEvent -> imageSave());
         saveAs.addEventHandler(ActionEvent.ACTION, actionEvent -> imageSaveAs());
         newProject.addEventHandler(ActionEvent.ACTION, actionEvent -> createProject());

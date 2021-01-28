@@ -12,6 +12,8 @@ public class NodesFabric {
             case SetSepia -> new SetSepiaNode();
             case SetNegative -> new SetNegativeNode();
             case SetGray -> new SetGrayNode();
+            case SetBlackWhite -> new SetBlackWhiteNode();
+            case ChangeContrast -> new ChangeContrastNode();
             default -> new DraggableNode();
         };
     }
@@ -27,6 +29,8 @@ public class NodesFabric {
             case "SetSharpness" -> nodeType = NodeTypes.SetSharpness;
             case "ChangeBrightness" -> nodeType = NodeTypes.ChangeBrightness;
             case "SetGray" -> nodeType = NodeTypes.SetGray;
+            case "SetBlackWhite" -> nodeType = NodeTypes.SetBlackWhite;
+            case "ChangeContrast" -> nodeType = NodeTypes.ChangeContrast;
             default -> nodeType = NodeTypes.BaseNode;
         }
 

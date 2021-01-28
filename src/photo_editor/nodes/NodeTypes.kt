@@ -8,5 +8,7 @@ enum class NodeTypes {
     SetSepia,
     SetSharpness,
     ChangeBrightness,
-    SetGray
+    SetGray,
+    SetBlackWhite,
+    ChangeContrast
 }
