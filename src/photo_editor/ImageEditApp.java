@@ -16,10 +16,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import photo_editor.nodes.DraggableNode;
-import photo_editor.nodes.LinkNode;
-import photo_editor.nodes.NodeTypes;
-import photo_editor.nodes.SetImageNode;
+import photo_editor.nodes.*;
 import org.opencv.core.Core;
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
@@ -70,6 +67,8 @@ public class ImageEditApp extends Application {
         MenuItem setGray = new MenuItem("Оттенки серого");
         MenuItem setBlackWhite = new MenuItem("Нуар");
         MenuItem changeContrast = new MenuItem("Контрастность");
+        MenuItem setSmallBlur = new MenuItem("Размытие центра");
+        MenuItem setBigBlur = new MenuItem("Размытие краев");
 
         Menu fileMenu = new Menu("Файл");
         MenuItem newProject = new MenuItem("Новый проект");
@@ -79,7 +78,7 @@ public class ImageEditApp extends Application {
         MenuItem saveProject = new MenuItem("Сохранить проект");
 
         fileMenu.getItems().addAll(newProject, saveThis, saveAs, saveProject, loadProject);
-        addMenu.getItems().addAll(changeSaturation, setNegative, setSepia, setSharpness, changeBrightness, setGray);
+        addMenu.getItems().addAll(changeSaturation, setNegative, setSepia, setSharpness, changeBrightness, setGray, setSmallBlur, setBigBlur);
         menuBar.getMenus().addAll(fileMenu, addMenu);
 
         changeSaturation.addEventHandler(ActionEvent.ACTION, actionEvent -> createNode(NodeTypes.ChangeSaturation));
@@ -90,6 +89,8 @@ public class ImageEditApp extends Application {
         setGray.addEventHandler(ActionEvent.ACTION, actionEvent -> createNode(NodeTypes.SetGray));
         setBlackWhite.addEventHandler(ActionEvent.ACTION, actionEvent -> createNode(NodeTypes.SetBlackWhite));
         changeContrast.addEventHandler(ActionEvent.ACTION, actionEvent -> createNode(NodeTypes.ChangeContrast));
+        setSmallBlur.addEventHandler(ActionEvent.ACTION, actionEvent -> createNode(NodeTypes.SetSmallBlur));
+        setBigBlur.addEventHandler(ActionEvent.ACTION, actionEvent -> createNode(NodeTypes.SetBigBlur));
         saveThis.addEventHandler(ActionEvent.ACTION, actionEvent -> imageSave());
         saveAs.addEventHandler(ActionEvent.ACTION, actionEvent -> imageSaveAs());
         newProject.addEventHandler(ActionEvent.ACTION, actionEvent -> createProject());

@@ -14,6 +14,8 @@ public class NodesFabric {
             case SetGray -> new SetGrayNode();
             case SetBlackWhite -> new SetBlackWhiteNode();
             case ChangeContrast -> new ChangeContrastNode();
+            case SetSmallBlur -> new SetSmallBlurNode();
+            case SetBigBlur -> new SetBigBlurNode();
             default -> new DraggableNode();
         };
     }
@@ -31,6 +33,8 @@ public class NodesFabric {
             case "SetGray" -> nodeType = NodeTypes.SetGray;
             case "SetBlackWhite" -> nodeType = NodeTypes.SetBlackWhite;
             case "ChangeContrast" -> nodeType = NodeTypes.ChangeContrast;
+            case "SetSmallBlur" -> nodeType = NodeTypes.SetSmallBlur;
+            case "SetBigBlur" -> nodeType = NodeTypes.SetBigBlur;
             default -> nodeType = NodeTypes.BaseNode;
         }
 

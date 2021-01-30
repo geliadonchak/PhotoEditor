@@ -10,5 +10,7 @@ enum class NodeTypes {
     ChangeBrightness,
     SetGray,
     SetBlackWhite,
-    ChangeContrast
+    ChangeContrast,
+    SetSmallBlur,
+    SetBigBlur
 }

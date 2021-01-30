@@ -24,6 +24,8 @@ public class ImageContainer {
         put(NodeTypes.SetGray, new GrayFilter());
         put(NodeTypes.ChangeContrast, new ContrastFilter());
         put(NodeTypes.SetBlackWhite, new BlackWhiteFilter());
+        put(NodeTypes.SetSmallBlur, new SmallBlurFilter());
+        put(NodeTypes.SetBigBlur, new BigBlurFilter());
     }};
 
     public void filter(NodeTypes nodeType, FilterOptions options) {
